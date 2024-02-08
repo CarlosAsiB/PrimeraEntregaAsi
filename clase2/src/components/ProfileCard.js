@@ -1,4 +1,6 @@
-function ProfileCard({ titulo, img }) {
+import ItemListContainer from "./ItemListContainer";
+
+function ProfileCard({ titulo, img, item }) {
     return (
         <div className="column is-one-third">
             <div className="card">
@@ -7,6 +9,7 @@ function ProfileCard({ titulo, img }) {
                         <img src={img} alt={titulo} />
                     </figure>
                     <p className="title">{titulo}</p>
+                    <ItemListContainer item={item} />
                 </div>
             </div>
         </div>
