@@ -1,6 +1,8 @@
 import ItemListContainer from "./ItemListContainer";
 
+
 function ProfileCard({ titulo, img, item }) {
+    
     return (
         <div className="column is-one-third">
             <div className="card">
