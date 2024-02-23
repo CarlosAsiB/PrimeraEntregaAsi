@@ -7,7 +7,7 @@ function ImageShow({ image }){
   
     return (
         <div>
-            <img className="resized-image" src={image.urls.regular} alt={image.alt_description} />
+            <img class="resized-image" src={image.urls.regular} alt={image.alt_description} />
         </div>
     );
   } 

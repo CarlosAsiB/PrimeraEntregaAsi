@@ -16,9 +16,9 @@ function CartWidget({img}) {
     return (
         <div>
             <img src={img} className="carritoImg" />
-            <span>{count}</span>
-            <button onClick={addCoffee} >Add Coffee</button>
-            <button onClick={removeCoffee}>Remove Coffee</button>
+            <span className='CartWidget-span'>{count}</span>
+            <button className='CartWidget-button' onClick={addCoffee} >Add Coffee</button>
+            <button  className='CartWidget-button' onClick={removeCoffee}>Remove Coffee</button>
         </div>
     );
 }

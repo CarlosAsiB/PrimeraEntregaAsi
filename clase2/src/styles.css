@@ -1,37 +1,127 @@
-
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .App {
-    text-align: center;
-  }
-  
-  .NavBar {
-    background-color: #2476c8;
-    padding: 10px 0;
-  }
-  
-  .NavBar a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  h1 {
-    color: #333;
-  }
-
-  .carritoImg {
-    width: 50px;
-    height: 50px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', serif;
+  background-color: #f0e6d2;
 }
 
+.App {
+  text-align: center;
+}
+
+.NavBar, nav {
+  background-color: #006400;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.NavBar a, .Link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #FFD700;
+  transition: color 0.3s ease-in-out;
+}
+
+.NavBar a:hover, .Link:hover {
+  color: #FFA500;
+}
+
+h1 {
+  color: #8B4513;
+  margin-bottom: 2rem;
+}
+
+.CartWidget img.carritoImg {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+}
 
 .resized-image {
-  width: 200px;
+  max-width: 100%;
   height: auto;
+  border-radius: 8px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.ProfileCard, .container {
+  background-color: #ffffff;
+  color: #006400;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ProfileCard:hover {
+  transform: scale(1.05);
+}
+
+.ProfileCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.title, .ItemListContainer h2 {
+  color: #8B4513;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  padding: 0 1rem;
+}
+
+.ItemListContainer p {
+  color: #626262;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.CartWidget {
+  display: flex;
+  align-items: center;
+  background-color: #FFD700;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.CartWidget-span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #8B4513;
+  padding: 0.25rem 0.5rem;
+  background-color: #FFD700;
+  border-radius: 50%;
+  margin: 0 10px;
+  display: inline-block;
+  min-width: 35px;
+  text-align: center;
+}
+
+.CartWidget-button {
+  background-color: #006400;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.CartWidget-button:hover {
+  background-color: #004d00;
+}
+
+.carritoImg {
+  width: 60px;
+  height: 60px;
+  margin-right: 0.5rem;
 }
