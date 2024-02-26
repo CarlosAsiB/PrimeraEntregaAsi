@@ -9,29 +9,29 @@ body {
   text-align: center;
 }
 
-.NavBar, nav {
+.navbar {
   background-color: #006400;
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.NavBar a, .Link {
+.navbar-item {
   margin: 0 15px;
   text-decoration: none;
-  color: #FFD700;
+  color: #ffd700;
   transition: color 0.3s ease-in-out;
 }
 
-.NavBar a:hover, .Link:hover {
-  color: #FFA500;
+.navbar-item:hover {
+  color: #ffa500;
 }
 
 h1 {
-  color: #8B4513;
+  color: #8b4513;
   margin-bottom: 2rem;
 }
 
-.CartWidget img.carritoImg {
+.carritoImg {
   width: 50px;
   height: 50px;
   margin-right: 0.5rem;
@@ -50,7 +50,7 @@ h1 {
   padding: 1rem;
 }
 
-.ProfileCard, .container {
+.card {
   background-color: #ffffff;
   color: #006400;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -60,33 +60,33 @@ h1 {
   transition: transform 0.3s ease-in-out;
 }
 
-.ProfileCard:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
-.ProfileCard img {
+.card-image img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.title, .ItemListContainer h2 {
-  color: #8B4513;
+.title, .card-content h2 {
+  color: #8b4513;
   font-weight: bold;
   margin: 1rem 0 0.5rem;
   padding: 0 1rem;
 }
 
-.ItemListContainer p {
+.card-content p {
   color: #626262;
   padding: 0 1rem;
   margin-bottom: 1rem;
 }
 
-.CartWidget {
+.cart-widget {
   display: flex;
   align-items: center;
-  background-color: #FFD700;
+  background-color: #ffd700;
   padding: 0.5rem;
   border-radius: 8px;
   margin-left: auto;
@@ -95,19 +95,18 @@ h1 {
 .CartWidget-span {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #8B4513;
+  color: #8b4513;
   padding: 0.25rem 0.5rem;
-  background-color: #FFD700;
+  background-color: #ffd700;
   border-radius: 50%;
   margin: 0 10px;
   display: inline-block;
   min-width: 35px;
   text-align: center;
 }
-
-.CartWidget-button {
+.CartWidget-button{
   background-color: #006400;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   padding: 0.5rem 1rem;
   margin: 0 0.25rem;
@@ -119,9 +118,21 @@ h1 {
 .CartWidget-button:hover {
   background-color: #004d00;
 }
+.Details {
+  background-color: #ffd700;
+  color: #8b4513;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none; 
+  display: inline-block; 
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
 
-.carritoImg {
-  width: 60px;
-  height: 60px;
-  margin-right: 0.5rem;
+.Details:hover {
+  background-color: #ffd633; 
+  color: #8b4513;
 }
