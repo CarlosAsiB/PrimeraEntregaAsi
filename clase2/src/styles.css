@@ -64,10 +64,11 @@ h1 {
   transform: scale(1.05);
 }
 
-.card-image img {
+.card-image img, .image img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
 .title, .card-content h2 {
@@ -83,42 +84,60 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.cart-widget {
+.cart-widget-container {
   display: flex;
   align-items: center;
-  background-color: #ffd700;
+  margin-left: auto;
   padding: 0.5rem;
   border-radius: 8px;
-  margin-left: auto;
 }
 
-.CartWidget-span {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #8b4513;
-  padding: 0.25rem 0.5rem;
-  background-color: #ffd700;
-  border-radius: 50%;
-  margin: 0 10px;
-  display: inline-block;
-  min-width: 35px;
-  text-align: center;
+.cart-widget-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
 }
-.CartWidget-button{
+
+.cart-widget-details span {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #8b4513;
+  margin: 0 10px;
+}
+
+.button {
   background-color: #006400;
   color: #ffffff;
   border: none;
-  padding: 0.5rem 1rem;
-  margin: 0 0.25rem;
+  padding: 10px 15px;
+  margin: 10px 5px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.CartWidget-button:hover {
+.button:hover, .Details:hover, .CartWidget-button:hover {
   background-color: #004d00;
 }
-.Details {
+
+.button.is-add-to-cart {
+  background-color: #8b4513;
+}
+
+.button.is-remove-from-cart {
+  background-color: #d9534f;
+}
+
+.button.is-add-to-cart:hover {
+  background-color: #7a3812;
+}
+
+.button.is-remove-from-cart:hover {
+  background-color: #c12e2a;
+}
+
+.Details, .CartWidget-button {
   background-color: #ffd700;
   color: #8b4513;
   border: none;
@@ -127,12 +146,12 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
-  text-decoration: none; 
-  display: inline-block; 
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .Details:hover {
-  background-color: #ffd633; 
+  background-color: #ffd633;
   color: #8b4513;
 }

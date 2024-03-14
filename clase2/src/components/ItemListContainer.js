@@ -1,9 +1,11 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import ProfileCard from './ProfileCard';
 
-function ItemListContainer({ items, category }) {
-  const filteredItems = items.filter(item => category ? item.category === category : true);
-
+function ItemListContainer({ items }) {
+  let { categoria } = useParams();
+  const filteredItems = items.filter(item => categoria ? item.category === categoria : true);
+  
   return (
     <div className="container">
       <div className="columns is-multiline">

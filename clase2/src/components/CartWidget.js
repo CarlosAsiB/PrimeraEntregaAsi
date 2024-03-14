@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-function CartWidget({img}) {
-    const [count, setCount] = useState(0);
+function CartWidget({ img }) {
+    const { cart, getTotalPrice } = useContext(CartContext);
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    const totalPrice = getTotalPrice();
+    console.log("Total Price: ", getTotalPrice()); 
 
-    const addCoffee = () => {
-        setCount(count + 1);
-    };
-
-    const removeCoffee = () => {
-        if (count > 0) {
-            setCount(count - 1);
-        }
-    };
 
     return (
-        <div>
-            <img src={img} className="carritoImg" />
-            <span className='CartWidget-span'>{count}</span>
-            <button className='CartWidget-button' onClick={addCoffee} >Add Coffee</button>
-            <button  className='CartWidget-button' onClick={removeCoffee}>Remove Coffee</button>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+            <img src={img} className="carritoImg" alt="Cart" />
+            {cart.length > 0 && (
+                <>
+                    <span>({totalItems} items)</span>
+                    <span> - ${totalPrice.toFixed(2)}</span>
+                </>
+            )}
         </div>
     );
 }
