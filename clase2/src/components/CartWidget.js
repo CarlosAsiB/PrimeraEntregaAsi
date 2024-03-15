@@ -14,7 +14,7 @@ function CartWidget({ img }) {
             {cart.length > 0 && (
                 <>
                     <span>({totalItems} items)</span>
-                    <span> - ${totalPrice.toFixed(2)}</span>
+                    <span> - ${totalPrice ? totalPrice.toFixed(2) : '0.00'}</span>
                 </>
             )}
         </div>

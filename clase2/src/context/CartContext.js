@@ -13,6 +13,7 @@ export const CartProvider = ({ children }) => {
             console.log(`Price: ${item.price}, Quantity: ${quantity}`); 
             const itemTotal = Number(item.price) * quantity;
             console.log(`Item Total: ${itemTotal}`); 
+            return total + itemTotal; 
         }, 0);
     };
     
